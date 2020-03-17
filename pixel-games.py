@@ -7,7 +7,7 @@ inputfile = "renoir.jpg"
 width, height = PImage.open("input/"+inputfile).size
 imagematrix = pyplot.imread("input/"+inputfile)
 x = (width * height)
-# since the shape is (3x3x3) we need to reshape it as (x,3) where x is the canvas size (width * height)
+# since the shape is (width x height x 3) we need to reshape it as (x,3) where x is the canvas size (width * height)
 flatmatrix = np.reshape(imagematrix,(x,3))
 # order by RGB
 # sorting we get the indices then apply them to our array
